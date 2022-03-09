@@ -5,8 +5,55 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:DesctopApp"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
+        Title="MainWindow" Height="550" Width="800"
+        WindowStyle="None"
+        ResizeMode="NoResize">
 
+    <Grid Background="#FFD6D6D6"
+          x:Name="MainPage">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="180"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+
+        <Grid Background="#FFFEFAFA"
+              Width="800"
+              Height="550"
+              VerticalAlignment="Stretch"
+              HorizontalAlignment="Stretch"
+              x:Name="WorkArea" 
+               Grid.Column="1">
+            <Menu Height="300"
+                  Width="60"
+                  Background="Azure">
+                
+            </Menu>
+        </Grid>
+
+        <Grid x:Name="sidePanel"
+              Background="#FF0F4E7A"
+              HorizontalAlignment="Left"
+              Width="180"
+              Grid.Column="0">
+            <StackPanel>
+                <Grid Height="50"
+                      Background="#FF0F4E7A">
+                    
+                    <Label HorizontalAlignment="Left"
+                           Width="35"
+                           Height="40"
+                           VerticalAlignment="Top"
+                           BorderBrush="Transparent"
+                           Margin="10,10,0,0"
+                           MouseLeftButtonDown="Label_MouseLeftButtonDown">
+                        <Label.Background>
+                            <ImageBrush ImageSource="/menu.png"/>
+                        </Label.Background>
+                    </Label>
+                </Grid>
+
+            </StackPanel>
+        </Grid>
+        
     </Grid>
 </Window>
