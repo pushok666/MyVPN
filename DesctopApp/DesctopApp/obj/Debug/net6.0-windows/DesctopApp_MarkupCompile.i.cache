@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NET;NET6_0;NETCOREAPP
 D:\WorkProjects\C#\MyVPN\DesctopApp\DesctopApp\App.xaml
-11407045341
+3-664859825
 
-5181922077
+7-1845232227
 1941905061893
-MainWindow.xaml;
+MainWindow.xaml;Page\AboutPage.xaml;Page\HomePage.xaml;
 
 False
 

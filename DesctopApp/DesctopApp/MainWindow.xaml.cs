@@ -13,6 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.Windows.Threading;
+using DesctopApp.Page;
 
 namespace DesctopApp
 {
@@ -52,10 +53,10 @@ namespace DesctopApp
             }
             else
             {
-                sidePanel.Width -= 16;
+                sidePanel.Width -= 32;
                 //WorkArea.Width += 16;
                 
-                if (sidePanel.Width <= 55)
+                if (sidePanel.Width <= 70)
                 {
                     timer.Stop();
                     hidden = true;
@@ -75,6 +76,16 @@ namespace DesctopApp
         private void Label_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
             timer.Start();
+        }
+
+        private void aboutEvent(object sender, MouseButtonEventArgs e)
+        {
+            DataContent.Content = new AboutPage();
+        }
+
+        private void homeEvent(object sender, MouseButtonEventArgs e)
+        {
+            DataContent.Content = new HomePage();
         }
     }
 }
