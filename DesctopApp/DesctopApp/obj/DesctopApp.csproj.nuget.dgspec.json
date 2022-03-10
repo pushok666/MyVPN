@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "D:\\работа\\MyVPN\\MyVPN\\DesctopApp\\DesctopApp\\DesctopApp.csproj": {}
+    "D:\\WorkProjects\\C#\\MyVPN\\DesctopApp\\DesctopApp\\DesctopApp.csproj": {}
   },
   "projects": {
-    "D:\\работа\\MyVPN\\MyVPN\\DesctopApp\\DesctopApp\\DesctopApp.csproj": {
+    "D:\\WorkProjects\\C#\\MyVPN\\DesctopApp\\DesctopApp\\DesctopApp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\работа\\MyVPN\\MyVPN\\DesctopApp\\DesctopApp\\DesctopApp.csproj",
+        "projectUniqueName": "D:\\WorkProjects\\C#\\MyVPN\\DesctopApp\\DesctopApp\\DesctopApp.csproj",
         "projectName": "DesctopApp",
-        "projectPath": "D:\\работа\\MyVPN\\MyVPN\\DesctopApp\\DesctopApp\\DesctopApp.csproj",
-        "packagesPath": "C:\\Users\\Mvideo\\.nuget\\packages\\",
-        "outputPath": "D:\\работа\\MyVPN\\MyVPN\\DesctopApp\\DesctopApp\\obj\\",
+        "projectPath": "D:\\WorkProjects\\C#\\MyVPN\\DesctopApp\\DesctopApp\\DesctopApp.csproj",
+        "packagesPath": "C:\\Users\\Pavel\\.nuget\\packages\\",
+        "outputPath": "D:\\WorkProjects\\C#\\MyVPN\\DesctopApp\\DesctopApp\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Mvideo\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Pavel\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -22,6 +22,7 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "http://10.0.25.124:8080/nuget/": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {

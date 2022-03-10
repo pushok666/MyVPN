@@ -29,6 +29,7 @@ namespace DesctopApp
         public MainWindow()
         {
             InitializeComponent();
+            
             margin = WorkArea.Margin;
             timer = new DispatcherTimer();
             timer.Interval = new TimeSpan(0, 0, 0, 0, 10);
@@ -46,16 +47,19 @@ namespace DesctopApp
                 {
                     timer.Stop();
                     hidden = false;
+                    FirstCol.Width = new GridLength(sidePanel.Width);
                 }
             }
             else
             {
                 sidePanel.Width -= 16;
+                //WorkArea.Width += 16;
+                
                 if (sidePanel.Width <= 55)
                 {
                     timer.Stop();
                     hidden = true;
-                    
+                    FirstCol.Width = new GridLength(sidePanel.Width);
                 }
             }
         }
@@ -66,11 +70,6 @@ namespace DesctopApp
             {
                 DragMove();
             }
-        }
-
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
-            timer.Start();
         }
 
         private void Label_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)

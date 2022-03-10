@@ -9,25 +9,21 @@
         WindowStyle="None"
         ResizeMode="NoResize">
 
-    <Grid Background="#FFD6D6D6"
+    <Grid Background="#FFFEFAFA"
           x:Name="MainPage">
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="180"/>
+            <ColumnDefinition x:Name="FirstCol" Width="180"/>
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
 
         <Grid Background="#FFFEFAFA"
               Width="800"
               Height="550"
-              VerticalAlignment="Stretch"
-              HorizontalAlignment="Stretch"
+              VerticalAlignment="Center"
+              HorizontalAlignment="Right"
               x:Name="WorkArea" 
                Grid.Column="1">
-            <Menu Height="300"
-                  Width="60"
-                  Background="Azure">
-                
-            </Menu>
+            <ContentControl x:Name="DataContent"/>
         </Grid>
 
         <Grid x:Name="sidePanel"
@@ -38,7 +34,7 @@
             <StackPanel>
                 <Grid Height="50"
                       Background="#FF0F4E7A">
-                    
+
                     <Label HorizontalAlignment="Left"
                            Width="35"
                            Height="40"
@@ -47,11 +43,10 @@
                            Margin="10,10,0,0"
                            MouseLeftButtonDown="Label_MouseLeftButtonDown">
                         <Label.Background>
-                            <ImageBrush ImageSource="/menu.png"/>
+                            <ImageBrush ImageSource="D:\\WorkProjects\\C#\\MyVPN\\DesctopApp\\DesctopApp\\icons\\menu.png"/>
                         </Label.Background>
                     </Label>
                 </Grid>
-
             </StackPanel>
         </Grid>
         
