@@ -43,7 +43,7 @@
                            Margin="10,10,0,0"
                            MouseLeftButtonDown="Label_MouseLeftButtonDown">
                         <Label.Background>
-                            <ImageBrush ImageSource="/menu.png"/>
+                            <ImageBrush ImageSource="/icons/menu.png"/>
                         </Label.Background>
                     </Label>
                 </Grid>
@@ -60,7 +60,7 @@
                            Margin="11,16,0,0"
                            BorderBrush="Transparent">
                             <Label.Background>
-                                <ImageBrush ImageSource="/home.png"/>
+                                <ImageBrush ImageSource="/icons/home.png"/>
                             </Label.Background>
                         </Label>
                         <Label Height="40"
