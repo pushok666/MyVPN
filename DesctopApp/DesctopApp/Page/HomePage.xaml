@@ -5,8 +5,47 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:DesctopApp.Page"
              mc:Ignorable="d" 
-             d:DesignHeight="450" d:DesignWidth="800">
-    <Grid Background="#FF2A2B80">
-            
+             d:DesignHeight="450" d:DesignWidth="640">
+    <Grid Background="#FFFEFAFA">
+        <TextBlock TextWrapping="Wrap" 
+                   Text="Welcome to MyVPN"
+                   FontSize="45"
+                   Foreground="#FF0F4E7A"
+                   HorizontalAlignment="Center"
+                   Width="250"
+                   TextAlignment="Center"
+                   Margin="0, 75,0,0"
+                   VerticalAlignment="Top"/>
+        <Border Width="150"
+                Height="40"
+                VerticalAlignment="Top"
+                HorizontalAlignment="Center"
+                Margin="0,290,0,0" 
+                Background="#FFE43D3D"
+                CornerRadius="20"
+                MouseDown="TestRipple">
+            <Border.Triggers>
+                <EventTrigger RoutedEvent="MouseDown">
+                    <EventTrigger.Actions>
+                        <BeginStoryboard>
+                            <Storyboard>
+                                <DoubleAnimation Storyboard.TargetProperty="Width" To="160"
+                                                         Duration="0:0:2">
+                                    <DoubleAnimation.EasingFunction>
+                                        <ElasticEase EasingMode="EaseOut" Oscillations="6"></ElasticEase>
+                                    </DoubleAnimation.EasingFunction>
+                                </DoubleAnimation>
+                                <DoubleAnimation Storyboard.TargetProperty="Height" To="50"
+                                                 Duration="0:0:3">
+                                    <DoubleAnimation.EasingFunction>
+                                        <ElasticEase EasingMode="EaseOut" Oscillations="6"></ElasticEase>
+                                    </DoubleAnimation.EasingFunction>
+                                </DoubleAnimation>
+                            </Storyboard>
+                        </BeginStoryboard>
+                    </EventTrigger.Actions>
+                </EventTrigger>
+            </Border.Triggers>
+        </Border>
     </Grid>
 </UserControl>

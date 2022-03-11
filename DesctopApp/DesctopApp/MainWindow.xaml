@@ -17,7 +17,7 @@
         </Grid.ColumnDefinitions>
 
         <Grid Background="#FFFEFAFA"
-              Width="800"
+              Width="640"
               Height="550"
               VerticalAlignment="Bottom"
               HorizontalAlignment="Right"
@@ -43,7 +43,7 @@
                            Margin="10,10,0,0"
                            MouseLeftButtonDown="Label_MouseLeftButtonDown">
                         <Label.Background>
-                            <ImageBrush ImageSource="D:\\WorkProjects\\C#\\MyVPN\\DesctopApp\\DesctopApp\\icons\\menu.png"/>
+                            <ImageBrush ImageSource="/menu.png"/>
                         </Label.Background>
                     </Label>
                 </Grid>
@@ -60,7 +60,7 @@
                            Margin="11,16,0,0"
                            BorderBrush="Transparent">
                             <Label.Background>
-                                <ImageBrush ImageSource="D:\\WorkProjects\\C#\\MyVPN\\DesctopApp\\DesctopApp\\icons\\home.png"/>
+                                <ImageBrush ImageSource="/home.png"/>
                             </Label.Background>
                         </Label>
                         <Label Height="40"

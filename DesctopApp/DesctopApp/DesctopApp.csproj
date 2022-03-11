@@ -8,7 +8,17 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="home.png" />
+    <None Remove="menu.png" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Folder Include="icons\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="home.png" />
+    <Resource Include="menu.png" />
   </ItemGroup>
 
 </Project>

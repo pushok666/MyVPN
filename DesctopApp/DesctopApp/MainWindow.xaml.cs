@@ -44,6 +44,7 @@ namespace DesctopApp
             if (hidden)
             {
                 sidePanel.Width += 16;
+                WorkArea.Width -= 16;
                 if (sidePanel.Width >= panelWidth)
                 {
                     timer.Stop();
@@ -54,7 +55,7 @@ namespace DesctopApp
             else
             {
                 sidePanel.Width -= 32;
-                //WorkArea.Width += 16;
+                WorkArea.Width += 32;
                 
                 if (sidePanel.Width <= 70)
                 {

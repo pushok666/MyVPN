@@ -24,5 +24,10 @@ namespace DesctopApp.Page
         {
             InitializeComponent();
         }
+
+        private void TestRipple(object sender, MouseButtonEventArgs e)
+        {
+
+        }
     }
 }
