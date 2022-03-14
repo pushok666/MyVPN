@@ -16,8 +16,8 @@
                    TextAlignment="Center"
                    Margin="0, 75,0,0"
                    VerticalAlignment="Top"/>
-        <Border Width="150"
-                Height="40"
+        <Border Width="160"
+                Height="45"
                 VerticalAlignment="Center"
                 HorizontalAlignment="Center"
                 Margin="0,170,0,0" 
@@ -25,18 +25,29 @@
                 CornerRadius="20"
                 MouseDown="TestRipple">
             <Border.Triggers>
-                <EventTrigger RoutedEvent="MouseDown">
+                <EventTrigger x:Name="testT" RoutedEvent="MouseDown">
                     <EventTrigger.Actions>
-                        <BeginStoryboard>
-                            <Storyboard>
-                                <DoubleAnimation Storyboard.TargetProperty="Width"
-                                 From="140" To="160" AutoReverse="True" Duration="0:0:2.5" RepeatBehavior="Forever"
+                        <BeginStoryboard x:Name="testB">
+                            <Storyboard x:Name="testS" >
+                                <DoubleAnimation Storyboard.TargetProperty="Width" Completed="testCom"
+                                 From="160" To="165" AutoReverse="True" Duration="0:0:0:1" RepeatBehavior="0:0:10" 
+                                 DecelerationRatio="1"/>
+                                <DoubleAnimation Storyboard.TargetProperty="Height" Completed="testCom"
+                                 From="45" To="55" AutoReverse="True" Duration="0:0:0:1" RepeatBehavior="0:0:10"
                                  DecelerationRatio="1"/>
                             </Storyboard>
                         </BeginStoryboard>
                     </EventTrigger.Actions>
                 </EventTrigger>
             </Border.Triggers>
+            <Label Content="Connect"
+                   x:Name="ConnectLabel"
+                   Foreground="#FFFEFAFA"
+                   HorizontalAlignment="Center"
+                   VerticalAlignment="Center"
+                   FontSize="22"
+                   VerticalContentAlignment="Stretch"
+                   HorizontalContentAlignment="Center"/>
         </Border>
     </Grid>
 </UserControl>
