@@ -14,6 +14,7 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.Windows.Threading;
 using DesctopApp.Page;
+using DesctopApp.BL;
 
 namespace DesctopApp
 {
@@ -22,7 +23,7 @@ namespace DesctopApp
     /// </summary>
     public partial class MainWindow : Window
     {
-        
+        HomePage homePage = new HomePage();
         DispatcherTimer timer;
         Thickness margin;
         double panelWidth;
@@ -30,7 +31,8 @@ namespace DesctopApp
         public MainWindow()
         {
             InitializeComponent();
-            
+            DataContent.Content = homePage;
+            DataContext = App.viewModel;
             margin = WorkArea.Margin;
             timer = new DispatcherTimer();
             timer.Interval = new TimeSpan(0, 0, 0, 0, 10);
@@ -86,7 +88,7 @@ namespace DesctopApp
 
         private void homeEvent(object sender, MouseButtonEventArgs e)
         {
-            DataContent.Content = new HomePage();
+            DataContent.Content = homePage;
         }
     }
 }

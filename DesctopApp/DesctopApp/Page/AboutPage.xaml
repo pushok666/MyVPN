@@ -3,10 +3,153 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
-             xmlns:local="clr-namespace:DesctopApp.Page"
+             xmlns:local="clr-namespace:DesctopApp.Page" 
+             xmlns:bl="clr-namespace:DesctopApp.BL" d:DataContext="{d:DesignInstance Type=bl:ApplicationViewModel}"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
     <Grid Background="#FFFEFAFA">
-            
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="0.4*"/>
+        </Grid.ColumnDefinitions>
+
+
+        <Grid Grid.Column="0"
+              Background="Transparent">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="40"/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <StackPanel Orientation="Horizontal">
+                <Label Content="Country"
+                       FontSize="15"
+                       Margin="110,0,0,0"
+                       HorizontalAlignment="Center"
+                       VerticalAlignment="Center"
+                       FontWeight="Bold"
+                       Foreground="#505050"/>
+                <Label Content="City"
+                       FontSize="15"
+                       Margin="65,0,0,0"
+                       HorizontalAlignment="Center"
+                       VerticalAlignment="Center"
+                       FontWeight="Bold"
+                       Foreground="#505050"/>
+                <Label Content="Speed"
+                       FontSize="15"
+                       Margin="80,0,0,0"
+                       HorizontalAlignment="Center"
+                       VerticalAlignment="Center"
+                       FontWeight="Bold"
+                       Foreground="#505050"/>
+            </StackPanel>
+            <ListBox ItemsSource="{Binding Countres}"
+                 SelectedItem="{Binding SelectedCountry}"
+                 Grid.Column="0"
+                 BorderThickness="0"
+                 Grid.Row="1"
+                 ScrollViewer.HorizontalScrollBarVisibility="Disabled">
+                <ListBox.ItemTemplate>
+                    <DataTemplate>
+                        <StackPanel Orientation="Horizontal" 
+                                Height="60">
+                            <Border CornerRadius="30"
+                                BorderThickness="2"
+                                BorderBrush="#FF0F4E7A"
+                                Background="#FFFEFAFA"
+                                Height="50"
+                                Width="50"
+                                Margin="17,0,20,0"
+                                HorizontalAlignment="Center"
+                                VerticalAlignment="Center">
+                                <Grid Background="Transparent">
+                                    <Label Height="40"
+                                       Width="40"
+                                       HorizontalAlignment="Center"
+                                       VerticalAlignment="Center"
+                                       VerticalContentAlignment="Center"
+                                       HorizontalContentAlignment="Center">
+                                        <Label.Background>
+                                            <ImageBrush ImageSource="{Binding Flag}"/>
+                                        </Label.Background>
+                                    </Label>
+                                </Grid>
+                            </Border>
+                            <Label Content="{Binding Name}"
+                               Foreground="#FF0F4E7A"
+                               FontSize="20"
+                                Margin="15,0,15,0"
+                               HorizontalAlignment="Center"
+                               VerticalAlignment="Center"/>
+                            <Label Content="{Binding City}"
+                               Foreground="#FF0F4E7A"
+                               FontSize="20"
+                               Margin="10,0,0,0"
+                               HorizontalAlignment="Center"
+                               VerticalAlignment="Center"/>
+                            <Label Content="{Binding Speed}"
+                               Foreground="#FF0F4E7A"
+                               FontSize="20"
+                               Margin="30,0,0,0"
+                               HorizontalAlignment="Right"
+                               VerticalAlignment="Center"/>
+                        </StackPanel>
+                    </DataTemplate>
+                </ListBox.ItemTemplate>
+            </ListBox>
+        </Grid>
+        <Grid Grid.Column="1"
+              Background="#FFFEFAFA">
+
+        </Grid>
+        <Grid Grid.Column="1"
+              Background="#FFFEFAFA"
+              DataContext="{Binding SelectedCountry}">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="0.8*"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <Border Grid.Row="0"
+                    Height="80"
+                    Width="80"
+                    CornerRadius="30"
+                    Background="#F0F0F0">
+                <Label>
+                    <Label.Background>
+                        <ImageBrush ImageSource="{Binding Flag, UpdateSourceTrigger=PropertyChanged}"/>
+                    </Label.Background>
+                </Label>
+            </Border>
+            <Label Grid.Row="1"
+                   Content="IP:"
+                   Foreground="#FF0F4E7A"
+                   FontSize="20"
+                   HorizontalAlignment="Left"
+                   VerticalAlignment="Top"
+                   Margin="5,70,0,0"/>
+            <Label Grid.Row="1"
+                   Content="{Binding Ip, UpdateSourceTrigger=PropertyChanged}"
+                   Foreground="#FF0F4E7A"
+                   FontSize="19"
+                   HorizontalAlignment="Left"
+                   VerticalAlignment="Top"
+                   Margin="35,71,0,0"/>
+            <Label Grid.Row="1"
+                   Content="Speed:"
+                   Foreground="#FF0F4E7A"
+                   FontSize="20"
+                   HorizontalAlignment="Left"
+                   VerticalAlignment="Top"
+                   Margin="5,130,0,0"/>
+            <Label Grid.Row="1"
+                   Content="{Binding Speed, UpdateSourceTrigger=PropertyChanged}"
+                   Foreground="#FF0F4E7A"
+                   FontSize="19"
+                   HorizontalAlignment="Left"
+                   VerticalAlignment="Top"
+                   Margin="80,131,0,0"/>
+        </Grid>
+        
+        
     </Grid>
 </UserControl>

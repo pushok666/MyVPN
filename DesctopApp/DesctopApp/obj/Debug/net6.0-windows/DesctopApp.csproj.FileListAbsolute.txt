@@ -25,7 +25,6 @@ D:\WorkProjects\C#\MyVPN\DesctopApp\DesctopApp\bin\Debug\net6.0-windows\DesctopA
 D:\WorkProjects\C#\MyVPN\DesctopApp\DesctopApp\bin\Debug\net6.0-windows\DesctopApp.dll
 D:\WorkProjects\C#\MyVPN\DesctopApp\DesctopApp\bin\Debug\net6.0-windows\ref\DesctopApp.dll
 D:\WorkProjects\C#\MyVPN\DesctopApp\DesctopApp\bin\Debug\net6.0-windows\DesctopApp.pdb
-D:\WorkProjects\C#\MyVPN\DesctopApp\DesctopApp\obj\Debug\net6.0-windows\DesctopApp.csproj.AssemblyReference.cache
 D:\WorkProjects\C#\MyVPN\DesctopApp\DesctopApp\obj\Debug\net6.0-windows\MainWindow.g.cs
 D:\WorkProjects\C#\MyVPN\DesctopApp\DesctopApp\obj\Debug\net6.0-windows\App.g.cs
 D:\WorkProjects\C#\MyVPN\DesctopApp\DesctopApp\obj\Debug\net6.0-windows\DesctopApp_MarkupCompile.cache
@@ -44,3 +43,4 @@ D:\WorkProjects\C#\MyVPN\DesctopApp\DesctopApp\obj\Debug\net6.0-windows\Page\Abo
 D:\WorkProjects\C#\MyVPN\DesctopApp\DesctopApp\obj\Debug\net6.0-windows\Page\AboutPage.baml
 D:\WorkProjects\C#\MyVPN\DesctopApp\DesctopApp\obj\Debug\net6.0-windows\Page\HomePage.g.cs
 D:\WorkProjects\C#\MyVPN\DesctopApp\DesctopApp\obj\Debug\net6.0-windows\Page\HomePage.baml
+D:\WorkProjects\C#\MyVPN\DesctopApp\DesctopApp\obj\Debug\net6.0-windows\DesctopApp.csproj.AssemblyReference.cache

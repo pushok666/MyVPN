@@ -12,8 +12,9 @@ namespace DesctopApp.BL
     {
         private string name = "";
         private string city = "";
-        private int levelSignal = 0;
+        private string speed = "";
         private string flag = "";
+        private string ip = "";
 
         public string Name
         {
@@ -33,12 +34,12 @@ namespace DesctopApp.BL
                 OnPropertyChanged("City");
             }
         }
-        public int LevelSignal
+        public string Speed
         {
-            get { return levelSignal; }
+            get { return speed; }
             set
             {
-                levelSignal = value;
+                speed = value;
                 OnPropertyChanged("LevelSignal");
             }
         }
@@ -49,6 +50,15 @@ namespace DesctopApp.BL
             {
                 flag = value;
                 OnPropertyChanged("Flag");
+            }
+        }
+        public string Ip
+        {
+            get { return ip; }
+            set
+            {
+                ip = value;
+                OnPropertyChanged("Ip");
             }
         }
 

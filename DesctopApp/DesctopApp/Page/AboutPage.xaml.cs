@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using DesctopApp.BL;
 
 namespace DesctopApp.Page
 {
@@ -23,6 +24,7 @@ namespace DesctopApp.Page
         public AboutPage()
         {
             InitializeComponent();
+            DataContext = App.viewModel;
         }
     }
 }

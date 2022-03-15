@@ -21,22 +21,24 @@ namespace DesctopApp.Page
     /// </summary>
     public partial class HomePage : UserControl
     {
-        
         public HomePage()
         {
             InitializeComponent();
         }
 
-        
+      
 
         private void TestRipple(object sender, MouseButtonEventArgs e)
         {
             ConnectLabel.Content = "Connecting...";
+           
         }
 
         private void testCom(object sender, EventArgs e)
         {
             ConnectLabel.Content = "Connect";
         }
+
+        
     }
 }
